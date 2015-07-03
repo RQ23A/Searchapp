@@ -65,7 +65,7 @@ class Searchapp():
 		"""Generates a dialog with the 'How to' instructions."""
 
 		dialog = Gtk.MessageDialog(None, 0, Gtk.MessageType.INFO,Gtk.ButtonsType.OK, "How to use Searchapp")
-		dialog.format_secondary_text("g = Google    y = Youtube    w = Wikipedia")
+		dialog.format_secondary_text("g = Google    y = Youtube    w = Wikipedia    rae= Real Academia Espanola")
 		dialog.run()
 
 		dialog.destroy()
@@ -110,9 +110,15 @@ class Searchapp():
 			webbrowser.open(url + search)
 			sys.exit()
 
+                elif parsed[0] == "rae":
+                        url = "http://lema.rae.es/drae/?val="
+                        search = parsed[1]
+                        webbrowser.open(url + search)
+                        sys.exit()
+
 		# Exception and pup up. Have to do nicer!
 
-		elif parsed[0] != "g" or parsed[0] != "y" or parsed[0] != "w":
+		elif parsed[0] != "g" or parsed[0] != "y" or parsed[0] != "w" or parsed[0] != "rae":
 			dialog2 = Gtk.MessageDialog(None, 0, Gtk.MessageType.INFO,Gtk.ButtonsType.OK, "Error")
 			dialog2.format_secondary_text("Doesn't work that way. See 'How to' on the Menu.")
 			dialog2.run()
