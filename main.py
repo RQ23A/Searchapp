@@ -1,6 +1,7 @@
 from gi.repository import Gtk
 import sys
 import webbrowser
+import json
 
 class Searchapp():
 
@@ -65,7 +66,7 @@ class Searchapp():
 		"""Generates a dialog with the 'How to' instructions."""
 
 		dialog = Gtk.MessageDialog(None, 0, Gtk.MessageType.INFO,Gtk.ButtonsType.OK, "How to use Searchapp")
-		dialog.format_secondary_text("g = Google    y = Youtube    w = Wikipedia    rae= Real Academia Espanola")
+		dialog.format_secondary_text("g = Google    y = Youtube    w = Wikipedia")
 		dialog.run()
 
 		dialog.destroy()
@@ -91,39 +92,16 @@ class Searchapp():
 
 		text = widget.get_text() # Gets text from widget
 		parsed = text.split(" ", 1) # Splits until the first space
-
-		if parsed[0] == "g":
-			url = "http://google.com/?#q="
-			search = parsed[1]
-			webbrowser.open(url + search)
-			sys.exit()
-
-		elif parsed[0] == "y":
-			url = "http://youtube.com/results?search_query="
-			search = parsed[1]
-			webbrowser.open(url + search)
-			sys.exit()
-
-		elif parsed[0] == "w":
-			url = "https://en.wikipedia.org/wiki/"
-			search = parsed[1]
-			webbrowser.open(url + search)
-			sys.exit()
-
-                elif parsed[0] == "rae":
-                        url = "http://lema.rae.es/drae/?val="
-                        search = parsed[1]
-                        webbrowser.open(url + search)
-                        sys.exit()
-
-		# Exception and pup up. Have to do nicer!
-
-		elif parsed[0] != "g" or parsed[0] != "y" or parsed[0] != "w" or parsed[0] != "rae":
-			dialog2 = Gtk.MessageDialog(None, 0, Gtk.MessageType.INFO,Gtk.ButtonsType.OK, "Error")
-			dialog2.format_secondary_text("Doesn't work that way. See 'How to' on the Menu.")
-			dialog2.run()
-			dialog2.destroy()
-
+		with open('config.json', 'rb') as json_file:
+			for item in json.load(json_file)['all']:
+				if parsed[0] == item['val']:
+					webbrowser.open(item['url'] + parsed[1])
+					sys.exit()
+			else:
+				dialog2 = Gtk.MessageDialog(None, 0, Gtk.MessageType.INFO,Gtk.ButtonsType.OK, "Error")
+                        	dialog2.format_secondary_text("Doesn't work that way. See 'How to' on the Menu.")
+                        	dialog2.run()
+                        	dialog2.destroy()
 
 # Main loop.
 def main():
