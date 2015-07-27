@@ -1,7 +1,9 @@
 {"all":[
     {"name": "Google", "val": "g", "url": "http://google.com/?#q="},
     {"name": "Youtube", "val": "y", "url": "http://youtube.com/results?search_query="},
-    {"name": "Wikipedia", "val": "w", "url": "https://en.wikipedia.org/wiki/"}
+    {"name": "Wikipedia", "val": "w", "url": "https://en.wikipedia.org/wiki/"},
+    {"name": "Avature Wikipedia", "val": "aw", "url": "https://wiki.xcade.net/index.php?search="},
+    {"name": "Teg Avature", "val": "teg", "url": "https://teg.avature.net/#Search/Type:%20%22all%22,%20In:%20%22everything%22/"}
     ]
 }
 
