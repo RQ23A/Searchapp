@@ -7,13 +7,6 @@ For better use, bind the script to a keyboard shortcut.
 
 ## Usage
 
-The default search values are Google, Youtube and Wikipedia but you can add whatever search you like just
-pasting the desire url in the "Add" menu.
-
-Example:
-
-![alt tag](https://raw.githubusercontent.com/RQ23A/Searchapp/master/readmeimgs/Screenshot%20from%202015-08-15%2014%3A41%3A10.png)
-
 It's very simple to use, just type
 * g github
 
@@ -39,3 +32,18 @@ To change it, just set the default value to whatever other key you have stored o
 go back to having no default value.
 
 * !default none
+
+### Add new searches
+
+The default search values are Google, Youtube and Wikipedia but you can add whatever search you like just
+pasting the desire url in the "Add" menu.
+
+Example:
+
+![alt tag](https://raw.githubusercontent.com/RQ23A/Searchapp/master/readmeimgs/Screenshot%20from%202015-08-15%2014%3A41%3A10.png)
+
+Here we would be adding Amazon to our searches, so next time we type:
+
+* am notebooks
+
+it will open a browser with that new search.
