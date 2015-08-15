@@ -4,6 +4,9 @@
     {"name": "Wikipedia", "val": "w", "url": "https://en.wikipedia.org/wiki/"},
     {"name": "Avature Wikipedia", "val": "aw", "url": "https://wiki.xcade.net/index.php?search="},
     {"name": "Teg Avature", "val": "teg", "url": "https://teg.avature.net/#Search/Type:%20%22all%22,%20In:%20%22everything%22/"}
+    ],
+ "commands":[
+    {"name": "!default", "val": "False", "key": ""}
     ]
 }
 
