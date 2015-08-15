@@ -12,7 +12,7 @@ It's very simple to use, just type
 
 and it will look "github" on google.
 
-![alt tag](https://raw.githubusercontent.com/RQ23A/Searchapp/master/readmeimgs/Screenshot%20from%202015-08-15%2014%3A39%3A58.png)
+![alt tag](http://s21.postimg.org/b12sikndj/Screenshot_from_2015_08_15_14_39_58.png)
 
 Another example:
 * y funny cats
@@ -40,7 +40,7 @@ pasting the desire url in the "Add" menu.
 
 Example:
 
-![alt tag](https://raw.githubusercontent.com/RQ23A/Searchapp/master/readmeimgs/Screenshot%20from%202015-08-15%2014%3A41%3A10.png)
+![alt tag](http://s14.postimg.org/r0wh51b2p/Screenshot_from_2015_08_15_14_41_10.png)
 
 Here we would be adding Amazon to our searches, so next time we type:
 
