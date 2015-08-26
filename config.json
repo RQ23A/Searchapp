@@ -28,9 +28,10 @@
     ], 
     "commands": [
         {
-            "key": "none", 
+            "key": "", 
             "name": "!default", 
-            "val": "True"
+            "url": "", 
+            "val": "false"
         }
     ]
 }

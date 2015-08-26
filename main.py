@@ -3,6 +3,7 @@ import sys
 import webbrowser
 import json
 from addmenu import AddMenuWindow
+from classes import StuffDoer
 
 class Searchapp():
 
@@ -101,35 +102,19 @@ class Searchapp():
 
 		text = widget.get_text() # Gets text from widget
 		parsed = text.split(" ", 1) # Splits until the first space
-		with open('config.json', 'r+') as json_file:
+
+		with open('config.json', 'rb') as json_file:
 			data = json.load(json_file)
 			alldata = data['all']
 			commandsdata = data['commands']
-			for items in alldata:
-				if commandsdata[0]['val'] == 'True' and parsed[0] != items['val']:
-					for item in alldata:
-						if commandsdata[0]['key'] == item['val'] and parsed[0] != commandsdata[0]['name']:
-							webbrowser.open(item['url'] + text)
-							sys.exit()
-				if parsed[0] == '!default':
-					commandsdata[0]['val'] = 'True'
-					commandsdata[0]['key'] = parsed[1]
-					json_file.seek(0, 0)
-					json.dump(data, json_file, indent=4, sort_keys=True)
-					json_file.truncate()
-					sys.exit()
-				if parsed[0] == '!default' and parsed [1] == 'none':
-					commandsdata[0]['val'] = 'False'
-					commandsdata[0]['key'] = ''
-					json_file.seek(0, 0)
-					json.dump(data, json_file, indent=4, sort_keys=True)
-					json_file.truncate()
-					sys.exit()
-				else:
-					for item in alldata:
-						if parsed[0] == item['val']:
-							webbrowser.open(item['url'] + parsed[1])
-							sys.exit()
+			if parsed[0] == '!default' and parsed[1] == 'none':
+				StuffDoer().set_default_none()
+			if parsed[0] == '!default' and parsed[1] != 'none':
+				StuffDoer().set_default(parsed[1])
+			if commandsdata[0]['val'] == 'true':
+				StuffDoer().search_default(text)
+			if commandsdata[0]['val'] == 'false':
+				StuffDoer().search_common(parsed[0], parsed[1])
 			else:
 				dialog2 = Gtk.MessageDialog(None, 0, Gtk.MessageType.INFO,Gtk.ButtonsType.OK, "Error")
 				dialog2.format_secondary_text("Doesn't work that way. See 'How to' on the Menu.")
