@@ -10,7 +10,7 @@ For better use, bind the script to a keyboard shortcut.
 It's very simple to use, just type
 * g github
 
-and it will look "github" on google.
+and it will look for "github" on google.
 
 ![alt tag](http://s21.postimg.org/b12sikndj/Screenshot_from_2015_08_15_14_39_58.png)
 
