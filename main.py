@@ -83,7 +83,7 @@ class Searchapp():
 
 		about = Gtk.AboutDialog()
 		about.set_program_name("Searchapp")
-		about.set_version("0.1")
+		about.set_version("1.2")
 		about.set_copyright("(c) 2015, RQ23A")
 		about.set_comments("A quicker way to find your stuff.")
 		about.set_logo_icon_name(None)
