@@ -17,18 +17,20 @@ class ListMenuWindow():
 		button = Gtk.Button("_Close", use_underline=True)
 		button.connect("clicked", self.close_win)
 
-		grid = Gtk.Grid()
-		table.attach(grid, 0, 1, 0, 1, xpadding=10, ypadding=10)
 		table.attach(button, 0, 1, 1, 2, xpadding=10, ypadding=10)
 		check_button = Gtk.CheckButton
 
 		with open('config.json') as json_file:
 			jsonfile = json.load(json_file)
-		col_counter=1
+
+		count = len(jsonfile['all'])
+		table2 = Gtk.Table(1, count, False)
+		table.attach(table2, 0, 1, 0, 1, xpadding=10, ypadding=10)
+		poss = 0
 		for label in jsonfile['all']:
 			label_text = Gtk.Label(label['name'])
-			grid.attach(label_text, 0, col_counter, 1, 1)
-			col_counter+=1
+			table2.attach(label_text, 0, 1, poss, poss+1, xpadding=10, ypadding=10)
+			poss += 1
 
 		win.show_all()
 
