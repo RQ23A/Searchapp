@@ -3,6 +3,8 @@ import sys
 import webbrowser
 import json
 from addmenu import AddMenuWindow
+from deletemenu import DeleteMenuWindow
+from listmenu import ListMenuWindow
 from classes import StuffDoer
 
 class Searchapp():
@@ -26,6 +28,14 @@ class Searchapp():
 		add = Gtk.MenuItem("Add") # Creates submenu
 		add.connect("activate", self.add_menu) # Creates close action
 		filemenu.append(add) # Append
+
+		delete = Gtk.MenuItem("Delete")
+		delete.connect("activate", self.delete_menu)
+		filemenu.append(delete)
+
+		lst = Gtk.MenuItem("List")
+		lst.connect("activate", self.list_menu)
+		filemenu.append(lst)
 
 		exit = Gtk.MenuItem("Exit") # Creates submenu
 		exit.connect("activate", Gtk.main_quit) # Creates close action
@@ -95,6 +105,14 @@ class Searchapp():
 	def add_menu(self, window):
 
 		sub = AddMenuWindow()
+
+	def delete_menu(self, window):
+
+		delete = DeleteMenuWindow()
+
+	def list_menu(self, window):
+
+		listmenu = ListMenuWindow()
 
 	def do_stuff(self, widget):
 
