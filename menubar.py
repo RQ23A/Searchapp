@@ -2,6 +2,7 @@
 
 from gi.repository import Gtk
 from addmenu import AddMenuWindow
+from deletemenu import DeleteMenuWindow
 from windows import SecondWindows
 
 class MenuBar():
@@ -15,12 +16,12 @@ class MenuBar():
         filem.set_submenu(filemenu)
 
         add = Gtk.MenuItem("Add")
-        add.connect("activate", self.add_menu)
+        add.connect("activate", self.open_add_menu)
         filemenu.append(add)
 
-#        delete = Gtk.MenuItem("Delete")
-#        delete.connect("activate", Actions().add_menu)
-#        filemenu.append(delete)
+        delete = Gtk.MenuItem("Delete")
+        delete.connect("activate", self.open_delete_menu)
+        filemenu.append(delete)
 
 #        lst = Gtk.MenuItem("List")
 #        lst.connect("activate", Actions().add_menu)
@@ -49,6 +50,10 @@ class MenuBar():
 
         return self.menu
 
-    def add_menu(self, window):
+    def open_add_menu(self, window):
 
         addmenu = AddMenuWindow()
+
+    def open_delete_menu(self, window):
+
+        deletemenu = DeleteMenuWindow()
