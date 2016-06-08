@@ -131,7 +131,7 @@ class Searchapp():
 				StuffDoer().set_default(parsed[1])
 			if commandsdata[0]['val'] == 'true':
 				StuffDoer().search_default(text)
-			if commandsdata[0]['val'] == 'false':
+			if commandsdata[0]['val'] == 'false' and len(parsed) > 1:
 				StuffDoer().search_common(parsed[0], parsed[1])
 			else:
 				dialog2 = Gtk.MessageDialog(None, 0, Gtk.MessageType.INFO,Gtk.ButtonsType.OK, "Error")

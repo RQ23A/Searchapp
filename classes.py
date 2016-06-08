@@ -5,7 +5,7 @@ import sys
 
 class StuffDoer:
 
-    def search_default(arg, text):
+    def search_default(self, text):
 
         parsed = text.split(" ", 1)
         with open('config.json', 'rb') as json_file:
@@ -21,7 +21,7 @@ class StuffDoer:
                 webbrowser.open(commandsdata[0]['url'] + text)
                 sys.exit()
 
-    def set_default(arg, key):
+    def set_default(self, key):
 
         with open('config.json', 'r+') as json_file:
             data = json.load(json_file)
@@ -38,7 +38,7 @@ class StuffDoer:
             json_file.truncate()
             sys.exit()
 
-    def set_default_none(arg):
+    def set_default_none(self):
 
         with open('config.json', 'r+') as json_file:
             data = json.load(json_file)
@@ -51,7 +51,7 @@ class StuffDoer:
             json_file.truncate()
             sys.exit()
 
-    def search_common(arg, key, rest):
+    def search_common(self, key, rest):
 
         with open('config.json', 'rb') as json_file:
             data = json.load(json_file)
