@@ -14,16 +14,6 @@
             "name": "Wikipedia", 
             "url": "https://en.wikipedia.org/wiki/", 
             "val": "w"
-        }, 
-        {
-            "name": "Avature Wikipedia", 
-            "url": "https://wiki.xcade.net/index.php?search=", 
-            "val": "aw"
-        }, 
-        {
-            "name": "Teg Avature", 
-            "url": "https://teg.avature.net/#Search/Type:%20%22all%22,%20In:%20%22everything%22/", 
-            "val": "teg"
         }
     ], 
     "commands": [
