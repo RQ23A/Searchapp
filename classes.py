@@ -7,19 +7,12 @@ class StuffDoer:
 
     def search_default(self, text):
 
-        parsed = text.split(" ", 1)
         with open('config.json', 'rb') as json_file:
             data = json.load(json_file)
             alldata = data['all']
             commandsdata = data['commands']
-
-            for item in alldata:
-                if parsed[0] == item['val']:
-                    webbrowser.open(item['url'] + parsed[1])
-                    sys.exit()
-            else:
-                webbrowser.open(commandsdata[0]['url'] + text)
-                sys.exit()
+            webbrowser.open(commandsdata[0]['url'] + text)
+            sys.exit()
 
     def set_default(self, key):
 
