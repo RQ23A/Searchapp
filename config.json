@@ -14,7 +14,7 @@
             "name": "Wikipedia",
             "url": "https://en.wikipedia.org/wiki/<searchapp>",
             "val": "w"
-        },
+        }
     ],
     "commands": [
         {
