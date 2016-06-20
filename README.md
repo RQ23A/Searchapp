@@ -43,8 +43,8 @@ Example:
 
 ![alt tag](https://s31.postimg.org/p5m41otaz/Screenshot_from_2016_06_20_16_41_40.png)
 
-Link before: https://www.amazon.com/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=guitars
-Ling after: https://www.amazon.com/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=<searchapp>
+Link before: "https://www.amazon.com/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=guitars"
+Link after: "https://www.amazon.com/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=<searchapp>"
 
 Here we would be adding Amazon to our searches, so next time we type:
 
