@@ -27,7 +27,7 @@ class ListMenuWindow():
         table.attach(table2, 0, 1, 0, 1, xpadding=10, ypadding=10)
         poss = 0
         for label in jsonfile['all']:
-            label_text = Gtk.Label(label['name'])
+            label_text = Gtk.Label(label['name'] + " ( " + label['val'] + " )")
             table2.attach(label_text, 0, 1, poss, poss+1, xpadding=10, ypadding=10)
             poss += 1
 

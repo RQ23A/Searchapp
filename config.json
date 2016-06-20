@@ -1,27 +1,28 @@
 {
     "all": [
         {
-            "name": "Google", 
-            "url": "http://google.com/?#q=", 
+            "name": "Google",
+            "url": "http://google.com/?#q=<searchapp>",
             "val": "g"
-        }, 
+        },
         {
-            "name": "Youtube", 
-            "url": "http://youtube.com/results?search_query=", 
+            "name": "Youtube",
+            "url": "http://youtube.com/results?search_query=<searchapp>",
             "val": "y"
-        }, 
+        },
         {
-            "name": "Wikipedia", 
-            "url": "https://en.wikipedia.org/wiki/", 
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/<searchapp>",
             "val": "w"
-        }
-    ], 
+        },
+    ],
     "commands": [
         {
-            "key": "", 
-            "name": "!default", 
-            "url": "", 
+            "key": "",
+            "name": "!default",
+            "url": "",
             "val": "false"
         }
     ]
 }
+

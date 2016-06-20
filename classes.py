@@ -44,14 +44,15 @@ class StuffDoer:
             json_file.truncate()
             sys.exit()
 
-    def search_common(self, key, rest):
+    def search_common(self, key, search):
 
         with open('config.json', 'rb') as json_file:
             data = json.load(json_file)
             alldata = data['all']
             for item in alldata:
                 if key == item['val']:
-                    webbrowser.open(item['url'] + rest)
+                    url = self.replace_string(item['url'], search)
+                    webbrowser.open(url)
                     sys.exit()
             else:
                 dialog2 = Gtk.MessageDialog(None, 0, Gtk.MessageType.INFO,Gtk.ButtonsType.OK, "Error")
@@ -59,3 +60,6 @@ class StuffDoer:
                 dialog2.run()
                 dialog2.destroy()
  
+    def replace_string(self, string, search):
+
+        return string.replace("<searchapp>", search)
