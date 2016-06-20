@@ -37,13 +37,28 @@ go back to having no default value.
 
 The default search values are Google, Youtube and Wikipedia but you can add whatever search you like just
 pasting the desire url in the "Add" menu.
+The easiest way to do this would be to search for something in you desire website and then replace the search in the url with the tag <searchapp> before pasting it in the Add menu.
 
 Example:
 
-![alt tag](http://s14.postimg.org/r0wh51b2p/Screenshot_from_2015_08_15_14_41_10.png)
+![alt tag](https://s31.postimg.org/p5m41otaz/Screenshot_from_2016_06_20_16_41_40.png)
+
+Link before: https://www.amazon.com/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=guitars
+Ling after: https://www.amazon.com/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=<searchapp>
 
 Here we would be adding Amazon to our searches, so next time we type:
 
 * am notebooks
 
 it will open a browser with that new search.
+
+### Delete old searches
+
+To delete a search you just need to go to the "Delete" menu and write the Name value of the search you don't want anymore.
+It has to be the same value as you enter the time you added it. You can check for the name in the "List" menu.
+
+Example:
+
+![alt tag](https://s31.postimg.org/ew93fb623/Screenshot_from_2016_06_20_16_48_49.png)
+
+This will delete Amazon search from the app.
