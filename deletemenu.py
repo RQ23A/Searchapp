@@ -23,7 +23,7 @@ class DeleteMenuWindow():
         table2.attach(button1, 0, 1, 0, 1, xpadding=10, ypadding=10)
         table2.attach(button2, 1, 2, 0, 1, xpadding=10, ypadding=10)
 
-        label = Gtk.Label("Type the full name of what you want to delete. (Should be exactly as it is in the List option")
+        label = Gtk.Label("Type the full name of what you want to delete. (Should be exactly as it is in the List option)")
         self.to_delete = Gtk.Entry()
         table1.attach(label, 0, 1, 0, 1, xpadding=10, ypadding=10)
         table1.attach(self.to_delete, 0, 1, 1, 2, xpadding=10, ypadding=10)
